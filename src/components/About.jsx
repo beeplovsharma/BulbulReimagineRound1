@@ -5,8 +5,8 @@ function About() {
   return (
     <>
       <div className="relative w-full h-[130vh] md:h-[50vh] bg-[#333333]">
-        <div className="absolute top-[-20%] md:top-[-10%] z-[99]">
-          <img src="black-border.svg" alt="" />
+        <div className="absolute w-full top-[-20%] md:top-[-10%] z-[99]">
+          <img src="black-border.svg" className="w-full" alt="" />
         </div>
         <div>
           <div className="py-16 px-4 bebas leading-[125px]">

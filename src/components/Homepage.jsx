@@ -1,24 +1,28 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import React from 'react'
+import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { IoCartOutline } from "react-icons/io5";
-import '../App.css';
+import "../App.css";
 const Homepage = () => {
-  useGSAP(()=>{
+  useGSAP(() => {
     gsap.to(".star", {
       rotate: 80,
       ease: "power2.in",
       scrollTrigger: {
-        trigger:".star",
-        scroller:"body",
+        trigger: ".star",
+        scroller: "body",
+        start: "20% 20%",
+        end: "60%",
         markers: true,
-        scrub: 1,
+        scrub: 0.5,
       },
-    })
-  })
+    });
+  });
   return (
     <>
-      <div className="relative w-full h-[130vh] sm:h-[80vh] bg-[#ffec85] overflow-hidden">
+      <div className="homepage relative w-full h-[130vh] sm:h-[80vh] bg-[#ffec85] overflow-hidden">
         <div>
           <img
             src="yellow-star-m.png"
@@ -36,13 +40,13 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <div className='main-text text-center relative bebas leading-[15vmax] text-[20vmax] sm:text-[12vmax] sm:leading-none font-bold mt-24 text-[#333]'>
+        <div className="main-text text-center relative bebas leading-[15vmax] text-[20vmax] sm:text-[12vmax] sm:leading-none font-bold mt-24 text-[#333]">
           <h1>THE EXPLOSIVE</h1>
           <h1>ENERGY DRINK</h1>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default Homepage
+export default Homepage;

@@ -19,8 +19,8 @@ function Black() {
   return (
     <>
       <div className="w-full bg-[#333] relative">
-        <div className="top-layer absolute top-[-6%] sm:top-[-36px]">
-          <img src="black-border.svg" alt="" />
+        <div className="top-layer w-full absolute top-[-6%] sm:top-[-36px]">
+          <img src="black-border.svg" className="w-full object-contain" alt="" />
         </div>
 
         <div className="relative">

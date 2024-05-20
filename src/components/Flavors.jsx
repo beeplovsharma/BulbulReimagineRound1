@@ -9,14 +9,14 @@ const Blank = () => {
           ease: "power2.in",
           scrollTrigger: {
             scroller: "body",
-            markers: true,
+            // markers: true,
             scrub: 4,
           },
         });
     })
   return (
     <div className="main relative w-full h-[180vh] md:h-[70vh] bg-[#ff5959] overflow-hidden">
-      <img className="bg-[#333]" src="red-border.svg" alt="" />
+      <img className="bg-[#333] w-full object-fill" src="red-border.svg" alt="" />
       <div className="w-full h-full flex flex-col items-center">
         <h1 className="z-[99] relative text-[20vmax] md:text-[12vmax] text-center leading-none font-bold text-[#ffedd7] md:p-4 bebas overflow-hidden">
           MORE FLAVORS
