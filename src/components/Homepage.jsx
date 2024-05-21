@@ -15,7 +15,7 @@ const Homepage = () => {
         scroller: "body",
         start: "20% 20%",
         end: "60%",
-        markers: true,
+        // markers: true,
         scrub: 0.5,
       },
     });

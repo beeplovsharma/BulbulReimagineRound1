@@ -13,10 +13,21 @@ const Blank = () => {
             scrub: 4,
           },
         });
+
+        gsap.to(".rotcan",{
+          rotate:360,
+          duration:100,
+          repeat:-1,
+          esae:'linear'
+        })
     })
   return (
     <div className="main relative w-full h-[180vh] md:h-[70vh] bg-[#ff5959] overflow-hidden">
-      <img className="bg-[#333] w-full object-fill" src="red-border.svg" alt="" />
+      <img
+        className="bg-[#333] w-full object-fill"
+        src="red-border.svg"
+        alt=""
+      />
       <div className="w-full h-full flex flex-col items-center">
         <h1 className="z-[99] relative text-[20vmax] md:text-[12vmax] text-center leading-none font-bold text-[#ffedd7] md:p-4 bebas overflow-hidden">
           MORE FLAVORS
@@ -29,7 +40,13 @@ const Blank = () => {
           className="absolute z-[1] top-[40%] md:top-[65%] star w-100"
           alt=""
         />
-        
+      </div>
+      <div>
+        <img
+          src="rotcans.png"
+          className="rotcan absolute top-[40%] md:top-[55%] left-1/2 -translate-x-[50%] z-[99] w-[1500px]"
+          alt=""
+        />
       </div>
     </div>
   );
