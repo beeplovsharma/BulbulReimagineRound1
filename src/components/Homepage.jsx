@@ -32,7 +32,7 @@ const Homepage = () => {
         </div>
 
         <div className="nav z-[999] p-4 flex justify-between">
-          <img src="redbull-1.png" className="w-24 h-fit md:w-16" alt="" />
+          <img src="redbull-1.png" className="w-24 h-fit md:w-17" alt="" />
           <div className="cursor-pointer">
             <button className="flex justify-center items-center gap-1 rounded-3xl px-8 py-2 bg-[#fff] border-[1px] border-black">
               <IoCartOutline />
