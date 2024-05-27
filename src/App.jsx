@@ -8,18 +8,23 @@ import Energy from './components/Energy';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 import LocomotiveScroll from "locomotive-scroll";
 import About from './components/About';
+import Three from './components/Three';
 
 
 
 function App() {
-  
-const locomotiveScroll = new LocomotiveScroll();
+
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <>
-      <Homepage/>
-      <Energy/>
-      <Flavors/>
-      <About/>
+      <Three />
+      <Homepage />
+      <Energy />
+      <div className="z-20 relative">
+
+      <Flavors />
+      <About />
+      </div>
     </>
   )
 }
