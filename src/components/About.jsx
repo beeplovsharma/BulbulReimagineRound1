@@ -10,7 +10,7 @@ function About() {
         </div>
   
         <div>
-          <div className="py-16 px-4 bebas leading-[125px] sm:leading-none">
+          <div className="py-16 px-4 bebas leading-none">
             <h1 className="text-[#ffedd7] text-[5vmax] font-bold">
               INTRODUCING
             </h1>
