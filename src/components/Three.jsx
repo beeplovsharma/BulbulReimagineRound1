@@ -43,7 +43,7 @@ const Three = () => {
         group.rotation.x = Math.PI * 0.1
         group.scale.set(2.5, 2.5, 2.5)
         group.position.y = -5
-        group.position.x = 1.1
+        group.position.x = 0
 
         const animate = function () {
             requestAnimationFrame(animate);
@@ -65,7 +65,7 @@ const Three = () => {
             },
             z: Math.PI / 8,
             y: -Math.PI / 2,
-            x: -Math.PI / 6
+            // x: -Math.PI / 6
         });
         gsap.to(group.rotation, {
             scrollTrigger: {
