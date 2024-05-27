@@ -35,7 +35,7 @@ const Three = () => {
             console.error(error);
         });
         scene.add(group);
-        group.add(axesHelper);
+        // group.add(axesHelper);
         camera.position.z = 15;
         // camera.position.x = 0;
         // camera.position.y = 15;
