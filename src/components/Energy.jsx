@@ -23,17 +23,17 @@ function Black() {
           <img src="black-border.svg" className="w-full object-contain" alt="" />
         </div>
 
-        <div className="relative">
-          <img className="boom-layer" src="boom_layer.svg" alt="" />
+        <div className="relative flex justify-center items-center">
+          <img className="boom-layer " src="boom_layer.svg" alt="" />
           <img
-            className="top-layer absolute top-0 z-20"
+            className="top-layer absolute top-0 -translate-x-[50%] left-1/2 z-20"
             src="top_layer.svg"
             alt=""
           />
         </div>
         <div className="z-20 relative bg-[#333]">
 
-          <div className="bebas md:flex md:flex-col md:items-center font-bold text-[#ffedd7] leading-[28vmax] text-[30vmax] md:text-[14vmax] md:leading-none px-4 py-12">
+          <div className="bebas md:flex md:flex-col md:items-center font-bold text-[#ffedd7] leading-[28vmax] text-[30vmax] sm:text-[10vmax] md:text-[14vmax] md:leading-none px-4 py-12">
             <h1>GIVES YOU</h1>
             <h1 className="flex items-center gap-6 overflow-hidden">
               WIIINGS <GiSpikyWing />

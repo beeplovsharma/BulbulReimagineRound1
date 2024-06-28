@@ -21,9 +21,8 @@ function App() {
       <Homepage />
       <Energy />
       <div className="z-20 relative">
-
-      <Flavors />
-      <About />
+        <Flavors />
+        <About />
       </div>
     </>
   )

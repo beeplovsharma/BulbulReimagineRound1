@@ -28,6 +28,7 @@ const Three = () => {
         const loader = new GLTFLoader();
         loader.load('redbull.glb', function (gltf) {
             gltf.scene.position.set(13.3, -2.1, -9.2); // replace x, y, z with the desired coordinates
+            // gltf.scene.scale.set(8, 6, 8); // replace x, y, z with the desired coordinates
             gltf.scene.scale.set(8, 6, 8); // replace x, y, z with the desired coordinates
             gltf.scene.rotation.set(0, 0, 0); // replace x, y, z with the desired coordinates
             group.add(gltf.scene);
@@ -83,7 +84,7 @@ const Three = () => {
 
     }, []);
 
-    return <div className='fixed z-20 sm:scale-[0.3]' ref={ref} />;
+    return <div className='fixed z-20 sm:scale-[0.35] md:scale-[0.5] -top-[10%]' ref={ref} />;
 };
 
 export default Three;

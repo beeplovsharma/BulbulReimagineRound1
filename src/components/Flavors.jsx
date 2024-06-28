@@ -22,7 +22,7 @@ const Blank = () => {
         })
     })
   return (
-    <div className="main relative w-full h-[180vh] md:h-[70vh] bg-[#ff5959] overflow-hidden">
+    <div className="main relative w-full h-[180vh] sm:h-[80vh] md:h-[90vh] lg:h-[120vh] bg-[#ff5959] overflow-hidden">
       <img
         className="bg-[#333] w-full object-fill"
         src="red-border.svg"
@@ -35,16 +35,18 @@ const Blank = () => {
         <button className="bg-[#ffedd7] z-[99] px-10 py-4 md:py-[10px] md:text-[10px] border-none rounded-[50px]">
           Shop Collection
         </button>
-        <img
-          src="red-star-m.png"
-          className="absolute z-[1] top-[40%] md:top-[65%] star w-100"
-          alt=""
-        />
+        <div className='flex justify-center'>
+          <img
+            src="red-star-m.png"
+            className="absolute z-[1] top-[50%] sm:top-[60%] md:top-[45%] lg:top-[45%] star w-100"
+            alt=""
+          />
+        </div>
       </div>
       <div>
         <img
           src="rotcans.png"
-          className="rotcan absolute top-[40%] md:top-[55%] left-1/2 -translate-x-[50%] z-[99] w-[1500px]"
+          className="rotcan absolute top-[40%] sm:top-[58%] md:top-[45%] left-1/2 -translate-x-[50%] z-[99] w-[1500px]"
           alt=""
         />
       </div>

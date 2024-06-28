@@ -4,9 +4,9 @@ import "../App.css";
 function About() {
   return (
     <>
-      <div className="relative w-full h-[130vh] md:h-[100vh] bg-[#333333]">
-        <div className="absolute w-full top-[-20%] md:top-[-6%] z-[99]">
-          <img src="black-border.svg" className="w-full" alt="" />
+      <div className="relative w-full h-[100vh] md:h-[70vh] bg-[#333333]">
+       <div className="top-layer w-full absolute top-[-20%] sm:top-[-36px] z-[99]">
+          <img src="black-border.svg" className="w-full object-contain" alt="" />
         </div>
   
         <div>
@@ -20,7 +20,6 @@ function About() {
             <h1 className="text-[#ff5959] text-[10vmax] font-bold">
               ENERGY DRINK
             </h1>
-            <Line />
           </div>
         </div>
       </div>
