@@ -11,13 +11,22 @@ const Three = () => {
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true }); // Set alpha to true for a transparent background
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            camera.aspect = width / height;
+
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
         renderer.setPixelRatio(4)
         ref.current.appendChild(renderer.domElement);
-        const sizes = {
-            width: window.innerWidth,
-            Height: window.innerHeight,
-        }
+        
         // Add a directional light
         const light = new THREE.DirectionalLight(0xffffff, 40);
         light.position.set(40, 200, 150);
@@ -43,6 +52,21 @@ const Three = () => {
         group.rotation.y = -Math.PI * 0.05
         group.rotation.x = Math.PI * 0.1
         group.scale.set(2.5, 2.5, 2.5)
+        function handleScale(params) {
+
+            if (window.innerWidth < 638) {
+                group.scale.set(0.35 * 2.5, 0.35 * 2.5, 0.35 * 2.5)
+            }
+            else if (window.innerWidth < 768) {
+                group.scale.set(0.5 * 2.5, 0.5 * 2.5, 0.5 * 2.5)
+
+            }
+            else {
+                group.scale.set(2.5, 2.5, 2.5)
+            }
+        }
+        window.addEventListener('resize', handleScale);
+
         group.position.y = -5
         group.position.x = 0
 
@@ -79,12 +103,12 @@ const Three = () => {
             y: -Math.PI,
         });
 
-        
+
         animate();
 
     }, []);
 
-    return <div className='fixed z-20 sm:scale-[0.35] md:scale-[0.5] -top-[10%]' ref={ref} />;
+    return <div className='h-screen w-full fixed z-20 ' ref={ref} />;
 };
 
 export default Three;
