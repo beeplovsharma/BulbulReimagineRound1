@@ -52,23 +52,31 @@ const Three = () => {
         group.rotation.y = -Math.PI * 0.05
         group.rotation.x = Math.PI * 0.1
         group.scale.set(2.5, 2.5, 2.5)
-        function handleScale(params) {
+        group.position.y = -5
+        group.position.x = 0
+        function handleScale() {
 
             if (window.innerWidth < 638) {
                 group.scale.set(0.35 * 2.5, 0.35 * 2.5, 0.35 * 2.5)
+                group.position.y = -0
+
             }
             else if (window.innerWidth < 768) {
                 group.scale.set(0.5 * 2.5, 0.5 * 2.5, 0.5 * 2.5)
+                group.position.y = -0
+
 
             }
             else {
                 group.scale.set(2.5, 2.5, 2.5)
+                group.position.y = -5
+
             }
         }
+        handleScale()
         window.addEventListener('resize', handleScale);
 
-        group.position.y = -5
-        group.position.x = 0
+        
 
         const animate = function () {
             requestAnimationFrame(animate);
