@@ -19,7 +19,7 @@ const Blank = () => {
       rotate: 360,
       duration: 100,
       repeat: -1,
-      esae: "linear",
+      ease: "linear",
     });
   });
   return (
