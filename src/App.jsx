@@ -20,7 +20,7 @@ function App() {
       {percent !== 100 ? (
         <Loader percent={percent} setPercent={setPercent} />
       ) : (
-        <div className="w-full">
+        <>
           <Three />
           <Homepage />
           <Energy />
@@ -28,7 +28,7 @@ function App() {
             <Flavors />
             <About />
           </div>
-        </div>
+        </>
       )}
     </>
   );
