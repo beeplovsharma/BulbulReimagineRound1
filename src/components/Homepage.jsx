@@ -30,14 +30,15 @@ const Homepage = () => {
           <div className="flex gap-2">
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="cursor-pointer flex justify-center items-center gap-1 rounded-3xl px-8 py-2 bg-[#fff] border-[1px] border-black"
+              className="cursor-pointer hover:bg-[#333] hover:text-[#ffedd7] duration-300 flex justify-center items-center gap-1 rounded-3xl px-8 py-2 bg-[#fff] border-[1px] border-black"
             >
               <IoCartOutline />
               Cart
             </motion.button>
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="cursor-pointer gap-1 rounded-3xl px-4 py-2 bg-[#fff] border-[1px] border-black"
+              transition={{ type: "spring", duration: 0.1, velocity: 0 }}
+              className="cursor-pointer hover:bg-[#333] hover:text-[#ffedd7] duration-300 gap-1 rounded-3xl px-4 py-2 bg-[#fff] border-[1px] border-black"
             >
               <RxHamburgerMenu />
             </motion.button>
