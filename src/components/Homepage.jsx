@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { IoCartOutline } from "react-icons/io5";
 import "../App.css";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { motion } from "framer-motion";
 const Homepage = () => {
   useGSAP(() => {
     gsap.to(".star", {
@@ -23,13 +25,22 @@ const Homepage = () => {
   return (
     <>
       <div className="homepage relative w-full h-[130vh] sm:h-[80vh] bg-[#ffec85] overflow-hidden">
-        <div className="nav z-[999] p-4 flex justify-between">
+        <div className="nav z-[999999] relative p-4 flex justify-between">
           <img src="redbull-1.png" className="w-24 h-fit md:w-17" alt="" />
-          <div className="cursor-pointer">
-            <button className="flex justify-center items-center gap-1 rounded-3xl px-8 py-2 bg-[#fff] border-[1px] border-black">
+          <div className="flex gap-2">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer flex justify-center items-center gap-1 rounded-3xl px-8 py-2 bg-[#fff] border-[1px] border-black"
+            >
               <IoCartOutline />
               Cart
-            </button>
+            </motion.button>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer gap-1 rounded-3xl px-4 py-2 bg-[#fff] border-[1px] border-black"
+            >
+              <RxHamburgerMenu />
+            </motion.button>
           </div>
         </div>
         <div className="w-full flex justify-center items-center">
@@ -42,8 +53,6 @@ const Homepage = () => {
           </div>
         </div>
 
-        
-        
         <div className="main-text text-center relative bebas leading-[15vmax] text-[20vmax] sm:text-[11vmax] md:text-[25vmax] md:leading-[20vmax] sm:leading-none font-bold mt-24 text-[#333]">
           <h1>THE EXPLOSIVE</h1>
           <h1>ENERGY DRINK</h1>
