@@ -39,6 +39,7 @@ function About() {
                 </a>
               </button>
             </FramerMagnetic>
+            
             <FramerMagnetic>
               <button className="bg-[#ffedd7] p-3 rounded-full">
                 <a
@@ -49,6 +50,7 @@ function About() {
                 </a>
               </button>
             </FramerMagnetic>
+
             <FramerMagnetic>
               <button className="bg-[#ffedd7] p-3 rounded-full">
                 <a
@@ -59,6 +61,7 @@ function About() {
                 </a>
               </button>
             </FramerMagnetic>
+
             <FramerMagnetic>
               <button className="bg-[#ffedd7] p-3 rounded-full">
                 <a target="_blank" href="https://x.com/redbull">

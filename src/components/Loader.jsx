@@ -17,7 +17,7 @@ export default function Loader({ percent, setPercent }) {
       }
       else{
         setPercent(time);
-        console.log(time);
+        // console.log(time);
       }
     }, 300);
   }

@@ -90,7 +90,7 @@ const Three = () => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.to(group.position, {
             scrollTrigger: {
-                trigger: "#trigger",
+                // trigger: "#trigger",
                 start: "top top",
                 end: "bottom top",
                 scrub: true,
@@ -102,7 +102,7 @@ const Three = () => {
         });
         gsap.to(group.rotation, {
             scrollTrigger: {
-                trigger: "#trigger",
+                // trigger: "#trigger",
                 start: "top top",
                 end: "+=200%",
                 scrub: true,

@@ -19,7 +19,7 @@ const Blank = () => {
       rotate: 360,
       duration: 100,
       repeat: -1,
-      esae: "linear",
+      ease: "linear",
     });
   });
   return (
@@ -35,7 +35,7 @@ const Blank = () => {
         </h1>
         <motion.button
           whileTap={{ scale: 0.95 }}
-          className="bg-[#ffedd7] cursor-pointer z-[999] px-10 py-4 md:py-[10px] md:text-[10px] border-none rounded-[50px]"
+          className="bg-[#ffedd7] hover:bg-[#333] hover:text-[#ffedd7] duration-300 cursor-pointer z-[999] px-10 py-4 md:py-[10px] md:text-[10px] border-none rounded-[50px]"
         >
           Shop Collection
         </motion.button>
