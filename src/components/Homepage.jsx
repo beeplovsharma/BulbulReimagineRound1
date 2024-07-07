@@ -16,7 +16,7 @@ const Homepage = () => {
         trigger: ".homepage",
         start: "50% 50%",
         end: "200% 50%",
-        markers: true,
+        // markers: true,
         scrub: 2,
       },
     });
