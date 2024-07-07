@@ -10,10 +10,17 @@ import LocomotiveScroll from "locomotive-scroll";
 import About from "./components/About";
 import Three from "./components/Three";
 import Loader from "./components/Loader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    const scroll = new LocomotiveScroll();
+
+    return () => {
+      if (scroll) scroll.destroy();
+    };
+  }, []);
+
   const [percent, setPercent] = useState(0);
   return (
     <>

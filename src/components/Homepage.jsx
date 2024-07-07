@@ -7,19 +7,21 @@ import { IoCartOutline } from "react-icons/io5";
 import "../App.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { motion } from "framer-motion";
+import { rotate } from "three/examples/jsm/nodes/Nodes.js";
 const Homepage = () => {
   useGSAP(() => {
-    gsap.to(".star", {
-      rotate: 80,
-      ease: "power2.in",
+    let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".star",
         scroller: "body",
-        start: "20% 20%",
-        end: "60%",
-        // markers: true,
-        scrub: 0.5,
+        trigger: ".homepage",
+        start: "50% 50%",
+        end: "200% 50%",
+        markers: true,
+        scrub: 2,
       },
+    });
+    tl.to(".star", {
+      rotate: "240deg",
     });
   });
   return (
