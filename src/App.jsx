@@ -5,23 +5,17 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Flavors from "./components/Flavors";
 import Energy from "./components/Energy";
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 import LocomotiveScroll from "locomotive-scroll";
 import About from "./components/About";
 import Three from "./components/Three";
 import Loader from "./components/Loader";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function App() {
-  useEffect(() => {
-    const scroll = new LocomotiveScroll();
+  const scroll = new LocomotiveScroll();
 
-    return () => {
-      if (scroll) scroll.destroy();
-    };
-  }, []);
-
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState(100);
   return (
     <>
       {percent !== 100 ? (
