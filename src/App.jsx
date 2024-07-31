@@ -15,7 +15,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function App() {
   const scroll = new LocomotiveScroll();
 
-  const [percent, setPercent] = useState(100);
+  const [percent, setPercent] = useState(0);
   return (
     <>
       {percent !== 100 ? (
